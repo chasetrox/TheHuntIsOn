@@ -11,13 +11,20 @@ public class Player : NetworkBehaviour
     [SerializeField] ToggleEvent onToggleLocal;
     [SerializeField] ToggleEvent onToggleRemote;
 
+    GameObject mainCamera;
+
     void Start()
     {
+        mainCamera = Camera.main.gameObject;
+
         EnablePlayer();
     }
 
     void DisablePlayer()
     {
+        if (isLocalPlayer)
+            mainCamera.SetActive(true);
+
         onToggleShared.Invoke(false);
 
         if(isLocalPlayer) {
@@ -29,6 +36,9 @@ public class Player : NetworkBehaviour
 
     void EnablePlayer()
     {
+        if (isLocalPlayer)
+            mainCamera.SetActive(false);
+
         onToggleShared.Invoke(true);
 
         if(isLocalPlayer) {

@@ -282,86 +282,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &507415990 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1973871442552074, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-    type: 2}
-  m_PrefabInternal: {fileID: 1193182509}
---- !u!114 &507415993 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114120715052069946, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-    type: 2}
-  m_PrefabInternal: {fileID: 1193182509}
-  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
---- !u!136 &507415996
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 507415990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &507415997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 507415990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4351fd4ff83148cf813cc4d01646dad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onToggleShared:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 507415996}
-        m_MethodName: set_enabled
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  onToggleLocal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 507415993}
-        m_MethodName: set_enabled
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2100012891}
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  onToggleRemote:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &517644673
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,11 +453,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114449686835015534, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-        type: 2}
-      propertyPath: onToggleLocal.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4704899426498816, guid: e619db3552e3a4bf7b8cf8487a11cc77, type: 2}
       propertyPath: m_LocalPosition.x
       value: 256.22806
@@ -570,24 +485,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114449686835015534, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-        type: 2}
-      propertyPath: onToggleLocal.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449686835015534, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-        type: 2}
-      propertyPath: onToggleLocal.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449686835015534, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-        type: 2}
-      propertyPath: onToggleLocal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 507415993}
-    m_RemovedComponents:
-    - {fileID: 114449686835015534, guid: e619db3552e3a4bf7b8cf8487a11cc77, type: 2}
-    - {fileID: 136228525484534600, guid: e619db3552e3a4bf7b8cf8487a11cc77, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e619db3552e3a4bf7b8cf8487a11cc77, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1536152956
@@ -668,7 +566,7 @@ GameObject:
   - component: {fileID: 1757827791}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -736,8 +634,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2100012891 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1981794088758886, guid: e619db3552e3a4bf7b8cf8487a11cc77,
-    type: 2}
-  m_PrefabInternal: {fileID: 1193182509}
