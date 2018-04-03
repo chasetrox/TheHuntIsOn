@@ -49,7 +49,10 @@ public class PlayerShooting : NetworkBehaviour {
             PlayerHealth enemy = hit.transform.GetComponent<PlayerHealth>();
             // If so, player takes damage
             if (enemy != null)
+            {
+                Debug.Log("Hit an enemy!");
                 enemy.TakeDamage();
+            }
         }
 
         RpcProcessShotEffects(result, hit.point);

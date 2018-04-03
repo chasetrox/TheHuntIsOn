@@ -36,8 +36,10 @@ public class Player : NetworkBehaviour
 
     void EnablePlayer()
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer) {
+            PlayerCanvas.canvas.Initialize();
             mainCamera.SetActive(false);
+        }
 
         onToggleShared.Invoke(true);
 
@@ -50,8 +52,14 @@ public class Player : NetworkBehaviour
 
     public void Die()
     {
+        if (isLocalPlayer) {
+            PlayerCanvas.canvas.WriteGameStatusText("You Died!");
+        }
+
         DisablePlayer();
+        Debug.Log("Player died!");
+
     }
 
-    
+
 }

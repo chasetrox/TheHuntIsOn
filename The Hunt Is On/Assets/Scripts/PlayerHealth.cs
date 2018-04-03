@@ -2,10 +2,12 @@
 using UnityEngine.Networking;
 
 public class PlayerHealth : NetworkBehaviour {
-    [SerializeField] int maxHealth = 100;
+    [SerializeField] int maxHealth = 3;
+
+    [SyncVar (hook = "OnHealthChange")] int health;
+
 
     Player player;
-    int health;
 
 	// Use this for initialization
 	void Awake () {
@@ -28,7 +30,7 @@ public class PlayerHealth : NetworkBehaviour {
         if (health <= 0)
             return died;
 
-        //
+        // decrement health
         health--;
         died = health <= 0;
 
@@ -40,7 +42,19 @@ public class PlayerHealth : NetworkBehaviour {
     [ClientRpc]
     void RpcTakeDamage(bool died)
     {
+        // Damage flash should go here
+        
         if (died)
+        {
             player.Die();
+        }
+    }
+
+    void OnHealthChange(int value)
+    {
+        health = value;
+        if (isLocalPlayer) {
+            PlayerCanvas.canvas.SetHealth(value);
+        }
     }
 }
