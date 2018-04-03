@@ -3,6 +3,7 @@ using UnityEngine.Networking;
 
 public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float shotCooldown = .3f; // time between shots
+    [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] ShotEffectManager shotEffects;
 
@@ -35,7 +36,7 @@ public class PlayerShooting : NetworkBehaviour {
 
     // Client asks the server to fire a shot;
     [Command]
-    void CmdFireShot(Vector3 origin, Vector3 direction)
+    public virtual void CmdFireShot(Vector3 origin, Vector3 direction)
     {
         RaycastHit hit;
 
@@ -48,7 +49,7 @@ public class PlayerShooting : NetworkBehaviour {
             // Check if the thing hit was a player
             PlayerHealth enemy = hit.transform.GetComponent<PlayerHealth>();
             // If so, player takes damage
-            if (enemy != null)
+            if (enemy != null && hit.distance <= range)
             {
                 Debug.Log("Hit an enemy!");
                 enemy.TakeDamage();
@@ -59,9 +60,9 @@ public class PlayerShooting : NetworkBehaviour {
     }
 
     [ClientRpc]
-    void RpcProcessShotEffects(bool hitSomething, Vector3 point)
+    public void RpcProcessShotEffects(bool hitSomething, Vector3 point)
     {
-        shotEffects.PlayShotEffects ();
+        //shotEffects.PlayShotEffects ();
 
         if (hitSomething) {
             Debug.Log("Hit Something!");
