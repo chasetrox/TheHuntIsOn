@@ -1081,8 +1081,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCooldown: 0.3
+  range: 35
   firePosition: {fileID: 4590567062346770}
-  shotEffects: {fileID: 114178398661976986}
+  attackFX: {fileID: 114178398661976986}
 --- !u!114 &114908826425978526
 MonoBehaviour:
   m_ObjectHideFlags: 1

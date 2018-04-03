@@ -5,7 +5,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float shotCooldown = .3f; // time between shots
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
-    [SerializeField] ShotEffectManager shotEffects;
+    [SerializeField] AttackEffectsManager attackFX;
 
     float elapsedTime;
     bool canShoot;
@@ -62,11 +62,11 @@ public class PlayerShooting : NetworkBehaviour {
     [ClientRpc]
     public void RpcProcessShotEffects(bool hitSomething, Vector3 point)
     {
-        //shotEffects.PlayShotEffects ();
+        attackFX.PlayShotEffects ();
 
         if (hitSomething) {
             Debug.Log("Hit Something!");
-            //shotEffects.PlayImpactEffect(point);
+            //attackFX.PlayImpactEffect(point);
         }
     }
 }
