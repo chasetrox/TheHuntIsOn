@@ -41,11 +41,12 @@ public class PlayerShooting : NetworkBehaviour {
         RaycastHit hit;
 
         Ray ray = new Ray (origin, direction);
-        Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
+        //Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
         bool result = Physics.Raycast(ray, out hit, 50f);
 
         if (result) {
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red);
             // Check if the thing hit was a player
             PlayerHealth enemy = hit.transform.GetComponent<PlayerHealth>();
             // If so, player takes damage
