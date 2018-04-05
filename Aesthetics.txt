@@ -1,0 +1,31 @@
+Skybox: 
+	* Pure white
+
+Fog:
+	* Color: Pure white
+	* Mode: Linear
+	* Start: 0
+	* End: 40
+
+Project Settings > Quality:
+	* Shadow Resolution: Medium (saved me like 20 FPs)
+
+Post Processing Effects:
+(Import post-processing-2, put a "post processing layer" component
+ on camera (select Layer->everything), and add an empty gameobject to scene.
+On the gameobject, add a "post processing volume" component.)
+FYI, download post-processing from here: https://github.com/Unity-Technologies/PostProcessing/wiki
+The standard asset in Unity store is not compatible with Unity 2017
+
+	* Is Global: true
+	* Weight: 1
+	* Profile (hit new)
+		* Grain:
+			* Colored: true
+			* Intensity: 0.578
+			* Size: 0.64
+		* Vignette:
+			* Mode: classic
+			* Color: Pure black
+			* Intensity: 0.388
+
