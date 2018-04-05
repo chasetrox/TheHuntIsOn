@@ -20,6 +20,7 @@ public class ShotEffectManager : AttackEffectsManager
         Debug.Log("Playing shot effects!");
         muzzleFlash.Stop(true);
         muzzleFlash.Play(true);
+
         gunAudio.Stop();
         gunAudio.Play();
     }
