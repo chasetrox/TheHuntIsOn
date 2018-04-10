@@ -1,0 +1,291 @@
+fileFormatVersion: 2
+guid: 37442ec80f9114833b2dff00b32cac78
+timeCreated: 1523398184
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: __AUTO_SAVE__untitled_0028:Body
+    100002: __AUTO_SAVE__untitled_0028:EarL
+    100004: __AUTO_SAVE__untitled_0028:EarL1
+    100006: __AUTO_SAVE__untitled_0028:EyeL
+    100008: __AUTO_SAVE__untitled_0028:EyeR
+    100010: __AUTO_SAVE__untitled_0028:group1
+    100012: __AUTO_SAVE__untitled_0028:group2
+    100014: __AUTO_SAVE__untitled_0028:Head
+    100016: __AUTO_SAVE__untitled_0028:Leg1
+    100018: __AUTO_SAVE__untitled_0028:Paw
+    100020: __AUTO_SAVE__untitled_0028:pCylinder1
+    100022: __AUTO_SAVE__untitled_0028:place3dTexture1
+    100024: __AUTO_SAVE__untitled_0028:polySurface1
+    100026: __AUTO_SAVE__untitled_0028:polySurface2
+    100028: __AUTO_SAVE__untitled_0028:polySurface3
+    100030: __AUTO_SAVE__untitled_0028:polySurface4
+    100032: __AUTO_SAVE__untitled_0028:polySurface5
+    100034: __AUTO_SAVE__untitled_0028:polySurface6
+    100036: __AUTO_SAVE__untitled_0028:polySurface7
+    100038: __AUTO_SAVE__untitled_0028:polySurface8
+    100040: __AUTO_SAVE__untitled_0028:pSphere2
+    100042: __AUTO_SAVE__untitled_0028:pSphere2 1
+    100044: __AUTO_SAVE__untitled_0028:Torso
+    100046: __AUTO_SAVE__untitled_0028:transform1
+    100048: __AUTO_SAVE__untitled_0028:transform10
+    100050: __AUTO_SAVE__untitled_0028:transform11
+    100052: __AUTO_SAVE__untitled_0028:transform12
+    100054: __AUTO_SAVE__untitled_0028:transform2
+    100056: __AUTO_SAVE__untitled_0028:transform3
+    100058: __AUTO_SAVE__untitled_0028:transform4
+    100060: __AUTO_SAVE__untitled_0028:transform5
+    100062: __AUTO_SAVE__untitled_0028:transform6
+    100064: __AUTO_SAVE__untitled_0028:transform7
+    100066: __AUTO_SAVE__untitled_0028:transform8
+    100068: __AUTO_SAVE__untitled_0028:transform9
+    100070: Arm
+    100072: Arm1
+    100074: Arm2
+    100076: Body
+    100078: Hand
+    100080: Head
+    100082: Leg
+    100084: pCube2
+    100086: pCylinder1
+    100088: pCylinder2
+    100090: polySurface10
+    100092: polySurface13
+    100094: polySurface13 1
+    100096: polySurface14
+    100098: polySurface15
+    100100: polySurface16
+    100102: polySurface17
+    100104: polySurface18
+    100106: polySurface19
+    100108: polySurface20
+    100110: polySurface6
+    100112: polySurface7
+    100114: polySurface7 1
+    100116: polySurface8
+    100118: polySurface8 1
+    100120: polySurface9
+    100122: polySurface9 1
+    100124: transform1
+    100126: transform10
+    100128: transform11
+    100130: transform12
+    100132: transform13
+    100134: transform14
+    100136: transform15
+    100138: transform16
+    100140: transform17
+    100142: transform18
+    100144: transform19
+    100146: transform2
+    100148: transform20
+    100150: transform21
+    100152: transform22
+    100154: transform23
+    100156: transform24
+    100158: transform25
+    100160: transform26
+    100162: transform27
+    100164: transform28
+    100166: transform3
+    100168: transform4
+    100170: transform5
+    100172: transform6
+    100174: transform7
+    100176: transform8
+    100178: transform9
+    100180: //RootNode
+    400000: __AUTO_SAVE__untitled_0028:Body
+    400002: __AUTO_SAVE__untitled_0028:EarL
+    400004: __AUTO_SAVE__untitled_0028:EarL1
+    400006: __AUTO_SAVE__untitled_0028:EyeL
+    400008: __AUTO_SAVE__untitled_0028:EyeR
+    400010: __AUTO_SAVE__untitled_0028:group1
+    400012: __AUTO_SAVE__untitled_0028:group2
+    400014: __AUTO_SAVE__untitled_0028:Head
+    400016: __AUTO_SAVE__untitled_0028:Leg1
+    400018: __AUTO_SAVE__untitled_0028:Paw
+    400020: __AUTO_SAVE__untitled_0028:pCylinder1
+    400022: __AUTO_SAVE__untitled_0028:place3dTexture1
+    400024: __AUTO_SAVE__untitled_0028:polySurface1
+    400026: __AUTO_SAVE__untitled_0028:polySurface2
+    400028: __AUTO_SAVE__untitled_0028:polySurface3
+    400030: __AUTO_SAVE__untitled_0028:polySurface4
+    400032: __AUTO_SAVE__untitled_0028:polySurface5
+    400034: __AUTO_SAVE__untitled_0028:polySurface6
+    400036: __AUTO_SAVE__untitled_0028:polySurface7
+    400038: __AUTO_SAVE__untitled_0028:polySurface8
+    400040: __AUTO_SAVE__untitled_0028:pSphere2
+    400042: __AUTO_SAVE__untitled_0028:pSphere2 1
+    400044: __AUTO_SAVE__untitled_0028:Torso
+    400046: __AUTO_SAVE__untitled_0028:transform1
+    400048: __AUTO_SAVE__untitled_0028:transform10
+    400050: __AUTO_SAVE__untitled_0028:transform11
+    400052: __AUTO_SAVE__untitled_0028:transform12
+    400054: __AUTO_SAVE__untitled_0028:transform2
+    400056: __AUTO_SAVE__untitled_0028:transform3
+    400058: __AUTO_SAVE__untitled_0028:transform4
+    400060: __AUTO_SAVE__untitled_0028:transform5
+    400062: __AUTO_SAVE__untitled_0028:transform6
+    400064: __AUTO_SAVE__untitled_0028:transform7
+    400066: __AUTO_SAVE__untitled_0028:transform8
+    400068: __AUTO_SAVE__untitled_0028:transform9
+    400070: Arm
+    400072: Arm1
+    400074: Arm2
+    400076: Body
+    400078: Hand
+    400080: Head
+    400082: Leg
+    400084: pCube2
+    400086: pCylinder1
+    400088: pCylinder2
+    400090: polySurface10
+    400092: polySurface13
+    400094: polySurface13 1
+    400096: polySurface14
+    400098: polySurface15
+    400100: polySurface16
+    400102: polySurface17
+    400104: polySurface18
+    400106: polySurface19
+    400108: polySurface20
+    400110: polySurface6
+    400112: polySurface7
+    400114: polySurface7 1
+    400116: polySurface8
+    400118: polySurface8 1
+    400120: polySurface9
+    400122: polySurface9 1
+    400124: transform1
+    400126: transform10
+    400128: transform11
+    400130: transform12
+    400132: transform13
+    400134: transform14
+    400136: transform15
+    400138: transform16
+    400140: transform17
+    400142: transform18
+    400144: transform19
+    400146: transform2
+    400148: transform20
+    400150: transform21
+    400152: transform22
+    400154: transform23
+    400156: transform24
+    400158: transform25
+    400160: transform26
+    400162: transform27
+    400164: transform28
+    400166: transform3
+    400168: transform4
+    400170: transform5
+    400172: transform6
+    400174: transform7
+    400176: transform8
+    400178: transform9
+    400180: //RootNode
+    2100000: __AUTO_SAVE__untitled_0028_surfaceShader1
+    2100002: __AUTO_SAVE__untitled_0028_EyeM
+    2100004: __AUTO_SAVE__untitled_0028_phong1
+    2300000: __AUTO_SAVE__untitled_0028:pCylinder1
+    2300002: polySurface14
+    2300004: polySurface15
+    2300006: polySurface17
+    2300008: polySurface19
+    2300010: polySurface20
+    3300000: __AUTO_SAVE__untitled_0028:pCylinder1
+    3300002: polySurface14
+    3300004: polySurface15
+    3300006: polySurface17
+    3300008: polySurface19
+    3300010: polySurface20
+    4300000: __AUTO_SAVE__untitled_0028:pCylinder1
+    4300002: polySurface14
+    4300004: polySurface15
+    4300006: polySurface17
+    4300008: polySurface19
+    4300010: polySurface20
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
