@@ -480,19 +480,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Lobby/Scripts/Lobby
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Lobby/Scripts/Lobby
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/Chase/Desktop/The Hunt Is On/The Hunt Is On
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: aa320000
-    m_LastClickedID: 12970
-    m_ExpandedIDs: 000000001c2800007c2b0000ca2b0000b42d000066300000f8300000863200004a380000ffffff7f
+    m_SelectedIDs: ae2d0000
+    m_LastClickedID: 11694
+    m_ExpandedIDs: 000000001c2800007c2b0000ca2b00006e2c0000402d0000b42d000066300000f830000064320000e0390000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7068feff
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c2800007c2b0000ca2b00006e2c0000402d0000b42d000066300000f8300000863200004a380000
+    m_ExpandedIDs: 000000001c2800007c2b0000ca2b0000b42d000066300000f830000064320000e0390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,7 +640,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 2c5ff6ffba5ff6ffe063f6ffe863f6fff2b3f6ff48b6f6fff2b8f6ff72bef6ff02bff6ff20c3f6ff28c3f6ff56cbf6ff2e06f7ff1e07f7ff3607f7ffc209f7ffa432f7ff6033f7ff7e37f7ff8637f7ffbe4cf7ff3a51f7ff7ed3f8ff52d4f8ff5ed4f8ff72d4f8ff1cd5f8ff4846ffffcc46fffface6ffff36e7ffff9cfbffff9efbffff00000000
+    m_ExpandedIDs: a4f9ffff50faffff62faffffc0faffff58fbffff9cfbffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,14 +691,14 @@ MonoBehaviour:
     height: 337
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 6529.622647047043
+  lastFramingTime: 511.6512589454651
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 284.78506, y: 47.24755, z: 323.87183}
+    m_Target: {x: 239.89091, y: 197.50362, z: 291.99396}
     speed: 2
-    m_Value: {x: 284.78506, y: 47.24755, z: 323.87183}
+    m_Value: {x: 239.89091, y: 197.50362, z: 291.99396}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -722,13 +722,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    m_Target: {x: 0.089877635, y: 0.0044817734, z: 0.0004044523, w: -0.99594265}
     speed: 2
-    m_Value: {x: 0.7071069, y: 0, z: 0, w: 0.7071069}
+    m_Value: {x: 0.089877635, y: 0.0044817734, z: 0.0004044523, w: -0.99594265}
   m_Size:
-    m_Target: 51.76828
+    m_Target: 843.5275
     speed: 2
-    m_Value: 51.76828
+    m_Value: 843.5275
   m_Ortho:
     m_Target: 0
     speed: 2
