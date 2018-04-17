@@ -6,6 +6,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
+    [SyncVar] public int numBullets = 3;
 
     float elapsedTime;
     bool canShoot;
@@ -27,8 +28,9 @@ public class PlayerShooting : NetworkBehaviour {
         elapsedTime += Time.deltaTime;
 
         // when the local player tries to shoot, ask server to shoot for them
-        if (Input.GetButtonDown("Fire1") && elapsedTime > shotCooldown) {
+        if (Input.GetButtonDown("Fire1") && elapsedTime > shotCooldown && numBullets > 0) {
             elapsedTime = 0;
+	    numBullets--;
             CmdFireShot(firePosition.position, firePosition.forward);
             // SHOOT
         }
