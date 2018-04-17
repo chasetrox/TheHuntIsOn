@@ -241,7 +241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1180073677644322
 GameObject:
   m_ObjectHideFlags: 1
@@ -2189,7 +2189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451785416848078}
   m_LocalRotation: {x: 0.638184, y: -0.09876062, z: 0.079434514, w: 0.75937986}
-  m_LocalPosition: {x: 0.5700073, y: 0.34999847, z: 0.6300049}
+  m_LocalPosition: {x: 1.35, y: 0.35, z: 0.83}
   m_LocalScale: {x: 0.32147154, y: 1, z: 0.34580418}
   m_Children: []
   m_Father: {fileID: 4131585239996222}
@@ -3374,8 +3374,7 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 5
   m_FootstepSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 0722e51b91b1f45ec8c76295f365471e, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!114 &114584526801156420
