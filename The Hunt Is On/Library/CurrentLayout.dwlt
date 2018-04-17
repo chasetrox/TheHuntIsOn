@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 51
+  controlID: 53
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 52
+  controlID: 54
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 53
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,19 +480,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Lobby/Scripts/Lobby
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Lobby/Scripts/Lobby
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/Chase/Desktop/The Hunt Is On/The Hunt Is On
+  m_LastProjectPath: /Users/Simon/Desktop/COMP50/TheHuntIsOn/The Hunt Is On
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: ae2d0000
-    m_LastClickedID: 11694
-    m_ExpandedIDs: 000000001c2800007c2b0000ca2b00006e2c0000402d0000b42d000066300000f830000064320000e0390000ffffff7f
+    scrollPos: {x: 0, y: 59}
+    m_SelectedIDs: de5f0000
+    m_LastClickedID: 24542
+    m_ExpandedIDs: 805d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7068feff
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c2800007c2b0000ca2b0000b42d000066300000f830000064320000e0390000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -638,9 +638,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: a4f9ffff50faffff62faffffc0faffff58fbffff9cfbffff9efbffff00000000
+    m_SelectedIDs: 46760000
+    m_LastClickedID: 30278
+    m_ExpandedIDs: d8e9fdff02eafdff4210fefff21cfeff2e21feff6680ffff6c80ffff6e80ffff7c80ffffc488ffff0aa6ffff0000000038760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -659,7 +659,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - GameLobby
+  - Game Arena
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -691,14 +691,14 @@ MonoBehaviour:
     height: 337
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 511.6512589454651
+  lastFramingTime: 872.1801280975342
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 239.89091, y: 197.50362, z: 291.99396}
+    m_Target: {x: 106.84912, y: 30.076532, z: 129.41869}
     speed: 2
-    m_Value: {x: 239.89091, y: 197.50362, z: 291.99396}
+    m_Value: {x: 106.84912, y: 30.076532, z: 129.41869}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -722,13 +722,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.089877635, y: 0.0044817734, z: 0.0004044523, w: -0.99594265}
+    m_Target: {x: -0.07686746, y: 0.9094139, z: -0.35954607, w: -0.1944138}
     speed: 2
-    m_Value: {x: 0.089877635, y: 0.0044817734, z: 0.0004044523, w: -0.99594265}
+    m_Value: {x: -0.07686699, y: 0.90940833, z: -0.3595439, w: -0.19441262}
   m_Size:
-    m_Target: 843.5275
+    m_Target: 98.422935
     speed: 2
-    m_Value: 843.5275
+    m_Value: 98.422935
   m_Ortho:
     m_Target: 0
     speed: 2
