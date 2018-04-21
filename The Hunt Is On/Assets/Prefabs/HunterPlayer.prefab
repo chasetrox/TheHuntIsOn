@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1354718058587154
 GameObject:
   m_ObjectHideFlags: 1
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 114590533591110074}
   m_Layer: 0
   m_Name: HunterPlayer
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -458,7 +458,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702580013069850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.31851, y: 47.326416, z: 134.33546}
+  m_LocalPosition: {x: 217.815, y: 0.63, z: 230.58978}
   m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
   m_Children:
   - {fileID: 4401913955707984}
@@ -858,7 +858,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f056405126e434c15b4cb770be3611ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5429e90e84e594adc95e6d075d850035, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -938,7 +938,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5429e90e84e594adc95e6d075d850035, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702580013069850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
@@ -1116,6 +1116,7 @@ MonoBehaviour:
   range: 35
   firePosition: {fileID: 4590567062346770}
   attackFX: {fileID: 114178398661976986}
+  numBullets: 3
 --- !u!114 &114908826425978526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1214,7 +1215,8 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 5
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 0722e51b91b1f45ec8c76295f365471e, type: 3}
+  - {fileID: 8300000, guid: 42c13e6c26fa1460f9ba1c4daac08209, type: 3}
+  - {fileID: 8300000, guid: d1f4d8d77793841aa9f59f4027bd4881, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!114 &114949260458916196
@@ -1323,7 +1325,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1702580013069850}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
@@ -1405,7 +1407,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -604042332
+  randomSeed: -430124649
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4787,7 +4789,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1114298147
+  randomSeed: 237178171
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8181,7 +8183,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1504580384
+  randomSeed: 1054726369
   InitialModule:
     serializedVersion: 3
     enabled: 1

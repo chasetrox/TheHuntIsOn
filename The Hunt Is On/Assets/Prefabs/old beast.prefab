@@ -2000,7 +2000,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2237,6 +2237,7 @@ MonoBehaviour:
   range: 3
   firePosition: {fileID: 4926874994733148}
   attackFX: {fileID: 0}
+  numBullets: 3
 --- !u!114 &114944677311205590
 MonoBehaviour:
   m_ObjectHideFlags: 1
