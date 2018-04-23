@@ -260,7 +260,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387959578961182}
-  m_LocalRotation: {x: 0.0021135209, y: -0.027750397, z: -0.016590016, w: 0.999475}
+  m_LocalRotation: {x: 0.0021135206, y: -0.027750395, z: -0.016590014, w: 0.99947494}
   m_LocalPosition: {x: -0.0100187585, y: 0.2000027, z: 2.3999918}
   m_LocalScale: {x: 0.8, y: 0.7999999, z: 0.7999999}
   m_Children: []
@@ -805,7 +805,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -827,7 +827,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5429e90e84e594adc95e6d075d850035, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 634c72c6e06f9415e96a077c281b054c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -885,7 +885,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1005,7 +1005,6 @@ MonoBehaviour:
   range: 35
   firePosition: {fileID: 4590567062346770}
   attackFX: {fileID: 114178398661976986}
-  numBullets: 3
 --- !u!114 &114908826425978526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1104,7 +1103,8 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 5
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 0722e51b91b1f45ec8c76295f365471e, type: 3}
+  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!114 &114949260458916196
@@ -1282,7 +1282,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1641097424
+  randomSeed: -482461311
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4664,7 +4664,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1054983676
+  randomSeed: -678725585
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8058,7 +8058,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 664984026
+  randomSeed: -983015472
   InitialModule:
     serializedVersion: 3
     enabled: 1

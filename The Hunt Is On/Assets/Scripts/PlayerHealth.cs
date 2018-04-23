@@ -3,7 +3,6 @@ using UnityEngine.Networking;
 
 public class PlayerHealth : NetworkBehaviour {
     [SerializeField] int maxHealth = 3;
-	[SerializeField] AudioSource hurtsound;
 
     [SyncVar (hook = "OnHealthChange")] int health;
 
@@ -44,7 +43,7 @@ public class PlayerHealth : NetworkBehaviour {
     void RpcTakeDamage(bool died)
     {
         // Damage flash should go here
-		hurtsound.Play();
+        
         if (died)
         {
             player.Die();
