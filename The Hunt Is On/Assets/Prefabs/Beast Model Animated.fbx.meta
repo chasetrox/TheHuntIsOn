@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 7ed459e0a77ac44e68d7b44f2831dd10
+timeCreated: 1524588340
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Body
+    100004: Head1
+    100006: Hips
+    100008: LeftArm
+    100010: LeftFoot
+    100012: LeftForeArm
+    100014: LeftHand
+    100016: LeftLeg
+    100018: LeftShoulder
+    100020: LeftToeBase
+    100022: LeftUpLeg
+    100024: Neck
+    100026: polySurface14
+    100028: polySurface15
+    100030: polySurface16
+    100032: polySurface17
+    100034: polySurface18
+    100036: polySurface19
+    100038: polySurface20
+    100040: QuickRigCharacter_Guides
+    100042: QuickRigCharacter_Head
+    100044: QuickRigCharacter_Hips
+    100046: QuickRigCharacter_LeftArm
+    100048: QuickRigCharacter_LeftFoot
+    100050: QuickRigCharacter_LeftForeArm
+    100052: QuickRigCharacter_LeftHand
+    100054: QuickRigCharacter_LeftLeg
+    100056: QuickRigCharacter_LeftShoulder
+    100058: QuickRigCharacter_LeftToeBase
+    100060: QuickRigCharacter_LeftUpLeg
+    100062: QuickRigCharacter_Neck
+    100064: QuickRigCharacter_Reference
+    100066: QuickRigCharacter_RightArm
+    100068: QuickRigCharacter_RightFoot
+    100070: QuickRigCharacter_RightForeArm
+    100072: QuickRigCharacter_RightHand
+    100074: QuickRigCharacter_RightLeg
+    100076: QuickRigCharacter_RightShoulder
+    100078: QuickRigCharacter_RightToeBase
+    100080: QuickRigCharacter_RightUpLeg
+    100082: QuickRigCharacter_Spine
+    100084: QuickRigCharacter_Spine1
+    100086: QuickRigCharacter_Spine2
+    100088: Reference
+    100090: RightArm
+    100092: RightFoot
+    100094: RightForeArm
+    100096: RightHand
+    100098: RightLeg
+    100100: RightShoulder
+    100102: RightToeBase
+    100104: RightUpLeg
+    100106: Spine
+    100108: Spine1
+    100110: Spine2
+    100112: transform26
+    100114: transform27
+    100116: transform28
+    400000: //RootNode
+    400002: Body
+    400004: Head1
+    400006: Hips
+    400008: LeftArm
+    400010: LeftFoot
+    400012: LeftForeArm
+    400014: LeftHand
+    400016: LeftLeg
+    400018: LeftShoulder
+    400020: LeftToeBase
+    400022: LeftUpLeg
+    400024: Neck
+    400026: polySurface14
+    400028: polySurface15
+    400030: polySurface16
+    400032: polySurface17
+    400034: polySurface18
+    400036: polySurface19
+    400038: polySurface20
+    400040: QuickRigCharacter_Guides
+    400042: QuickRigCharacter_Head
+    400044: QuickRigCharacter_Hips
+    400046: QuickRigCharacter_LeftArm
+    400048: QuickRigCharacter_LeftFoot
+    400050: QuickRigCharacter_LeftForeArm
+    400052: QuickRigCharacter_LeftHand
+    400054: QuickRigCharacter_LeftLeg
+    400056: QuickRigCharacter_LeftShoulder
+    400058: QuickRigCharacter_LeftToeBase
+    400060: QuickRigCharacter_LeftUpLeg
+    400062: QuickRigCharacter_Neck
+    400064: QuickRigCharacter_Reference
+    400066: QuickRigCharacter_RightArm
+    400068: QuickRigCharacter_RightFoot
+    400070: QuickRigCharacter_RightForeArm
+    400072: QuickRigCharacter_RightHand
+    400074: QuickRigCharacter_RightLeg
+    400076: QuickRigCharacter_RightShoulder
+    400078: QuickRigCharacter_RightToeBase
+    400080: QuickRigCharacter_RightUpLeg
+    400082: QuickRigCharacter_Spine
+    400084: QuickRigCharacter_Spine1
+    400086: QuickRigCharacter_Spine2
+    400088: Reference
+    400090: RightArm
+    400092: RightFoot
+    400094: RightForeArm
+    400096: RightHand
+    400098: RightLeg
+    400100: RightShoulder
+    400102: RightToeBase
+    400104: RightUpLeg
+    400106: Spine
+    400108: Spine1
+    400110: Spine2
+    400112: transform26
+    400114: transform27
+    400116: transform28
+    2100000: __AUTO_SAVE__untitled_0028_EyeM
+    2100002: __AUTO_SAVE__untitled_0028_phong1
+    2300000: polySurface14
+    2300002: polySurface15
+    2300004: polySurface17
+    2300006: polySurface19
+    3300000: polySurface14
+    3300002: polySurface15
+    3300004: polySurface17
+    3300006: polySurface19
+    4300000: polySurface14
+    4300002: polySurface15
+    4300004: polySurface17
+    4300006: polySurface19
+    4300008: polySurface20
+    7400000: Walk
+    7400002: Idle
+    7400004: Side Walk
+    7400006: Run
+    7400008: Attack
+    9500000: //RootNode
+    13700000: polySurface20
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 26
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Side Walk
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 104
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 110
+      lastFrame: 122
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,7 +15,7 @@ public class Player : NetworkBehaviour
 
     void Start()
     {
-        Debug.Log("Start for beast");
+        Debug.Log("Start for Player");
         mainCamera = Camera.main.gameObject;
 
         EnablePlayer();
@@ -38,15 +38,16 @@ public class Player : NetworkBehaviour
     void EnablePlayer()
     {
         if (isLocalPlayer) {
-            Debug.Log("Is local beast");
+            Debug.Log("Is local player");
             PlayerCanvas.canvas.Initialize();
             mainCamera.SetActive(false);
-            Debug.Log("continuing w enable");
+            Debug.Log("main camera.set active false");
         }
 
         onToggleShared.Invoke(true);
 
         if(isLocalPlayer) {
+            Debug.Log("Invoking local");
             onToggleLocal.Invoke(true);
         } else {
             onToggleRemote.Invoke(true);

@@ -6,6 +6,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
+    [SyncVar] public int numBullets = 3;
 
     float elapsedTime;
     bool canShoot;
@@ -27,8 +28,9 @@ public class PlayerShooting : NetworkBehaviour {
         elapsedTime += Time.deltaTime;
 
         // when the local player tries to shoot, ask server to shoot for them
-        if (Input.GetButtonDown("Fire1") && elapsedTime > shotCooldown) {
+        if (Input.GetButtonDown("Fire1") && elapsedTime > shotCooldown && numBullets > 0) {
             elapsedTime = 0;
+	    	numBullets--;
             CmdFireShot(firePosition.position, firePosition.forward);
             // SHOOT
         }
@@ -41,16 +43,17 @@ public class PlayerShooting : NetworkBehaviour {
         RaycastHit hit;
 
         Ray ray = new Ray (origin, direction);
-        //Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
+        Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
-        bool result = Physics.Raycast(ray, out hit, 50f);
+        bool result = Physics.Raycast(ray, out hit, range);
 
         if (result) {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 5.0f);
             // Check if the thing hit was a player
             PlayerHealth enemy = hit.transform.GetComponent<PlayerHealth>();
+                
             // If so, player takes damage
-            if (enemy != null && hit.distance <= range)
+            if (enemy != null)
             {
                 Debug.Log("Hit an enemy!");
                 enemy.TakeDamage();
