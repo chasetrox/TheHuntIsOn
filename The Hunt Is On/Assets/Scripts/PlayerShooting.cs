@@ -73,4 +73,10 @@ public class PlayerShooting : NetworkBehaviour {
             //attackFX.PlayImpactEffect(point);
         }
     }
+	
+    // Add bullets
+    public void addBullets(int num)
+    {
+	    numBullets += num;
+    }
 }
