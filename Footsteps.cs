@@ -24,12 +24,12 @@ public class Footsteps : NetworkBehaviour
     public GameObject footstepPrefab; // Prefab of footprint sprites
     public Transform footPos; // Position of player feet, where to check ground from
     public float footDistance = 1; // Minimum displacement to place a footprint and play sound
+    public float groundCheckDist = 0.2f; // How far down below feet to check for ground
     public AudioClip[] snowSFX; // Sounds of walking in snow
     public AudioClip[] waterSFX; // Sounds of walking in water
-   
+
     [SyncVar] private bool isWalking = false;
     [SyncVar] private bool inWater = false;
-    private float groundCheckDist = 0.2f;
     private Vector3 lastPos;
     private float displacement;
     private Vector3 down;
@@ -42,7 +42,7 @@ public class Footsteps : NetworkBehaviour
         mask = 1 << LayerMask.NameToLayer("Ground");
     }
 
-    void Update ()
+    void Update()
     {
         if (isLocalPlayer)
             isWalking = Input.GetButton("walk");
@@ -62,21 +62,26 @@ public class Footsteps : NetworkBehaviour
             // Play footstep sound
             playSound();
 
-            // Raycast down from player feet, check if it hits ground
-            RaycastHit hit;
-            if (Physics.Raycast(footPos.position, down, out hit, groundCheckDist, mask))
+            // Dont place footsteps while standing in water
+            if(!inWater)
             {
-                // Instantiate a footstep prefab in the correct place and orientation
-                Vector3 pos = hit.point;
-                pos.y += 0.1f;
-                Vector3 dir = Vector3.ProjectOnPlane(transform.forward, hit.normal);
-                Quaternion rot = Quaternion.LookRotation(dir, hit.normal);
-                GameObject step = Instantiate(footstepPrefab, pos, rot);
-
+                // Raycast down from player feet, check if it hits ground
+                RaycastHit hit;
+                if (Physics.Raycast(footPos.position, down, out hit, groundCheckDist, mask))
+                {
+                    // Instantiate a footstep prefab in the correct place and orientation
+                    Vector3 pos = hit.point;
+                    pos.y += 0.1f;
+                    Vector3 dir = Vector3.ProjectOnPlane(transform.forward, hit.normal);
+                    Quaternion rot = Quaternion.LookRotation(dir, hit.normal);
+                    GameObject step = Instantiate(footstepPrefab, pos, rot);
+                    Debug.DrawRay(hit.point, Vector3.up, Color.red, 10);
+                }
             }
+            
         }
-        
-	}
+
+    }
 
     // Play a random sfx from appropriate array of sfx
     private void playSound()
@@ -93,15 +98,8 @@ public class Footsteps : NetworkBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void toggle_water(bool state)
     {
-        if (other.CompareTag("water"))
-            inWater = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("water"))
-            inWater = false;
+        inWater = state;
     }
 }
