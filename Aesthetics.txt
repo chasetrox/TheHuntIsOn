@@ -10,6 +10,8 @@ Lighting:
 		* Mode: Exponential squared
 		* Density: 0.03
 
+In scene, set the directional light to "mixed"
+
 Project Settings > Quality:
 	* For every quality level below high, set LOD Bias to 2.
 		* For high and above, 3
