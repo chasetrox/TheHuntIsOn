@@ -5,6 +5,10 @@ Lighting:
 		* Source: Color
 		* Ambient Color: 57688D
 		* Ambient Mode: Baked
+	Realtime Lighting: (off)
+	Mixed Lighting:
+		* Baked Global Illumination: (on)
+		* Lighting Mode: shadowmask
 	Fog:
 		* Color: ECECEEFF
 		* Mode: Exponential squared
