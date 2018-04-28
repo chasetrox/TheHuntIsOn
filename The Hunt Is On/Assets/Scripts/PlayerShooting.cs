@@ -7,6 +7,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
     [SyncVar] public int numBullets = 3;
+    public int dmgPerShot = 3;
 
     float elapsedTime;
     bool canShoot;
@@ -56,7 +57,7 @@ public class PlayerShooting : NetworkBehaviour {
             if (enemy != null)
             {
                 Debug.Log("Hit an enemy!");
-                enemy.TakeDamage();
+                enemy.TakeDamage(dmgPerShot);
             }
         }
 
