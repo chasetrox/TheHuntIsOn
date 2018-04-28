@@ -23,7 +23,7 @@ public class PlayerHealth : NetworkBehaviour {
 
     // Receive damage from other player
     [Server]
-    public bool TakeDamage()
+    public bool TakeDamage(int dmg)
     {
         bool died = false;
 
@@ -31,7 +31,7 @@ public class PlayerHealth : NetworkBehaviour {
             return died;
 
         // decrement health
-        health--;
+        health -= dmg;
         died = health <= 0;
 
         RpcTakeDamage(died);
