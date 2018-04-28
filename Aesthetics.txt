@@ -1,14 +1,23 @@
-Skybox: 
-	* Pure white
-
-Fog:
-	* Color: Pure white
-	* Mode: Linear
-	* Start: 0
-	* End: 40
+Lighting:
+	Skybox: 
+		* Pure white skybox
+	Environment Lighting:
+		* Source: Color
+		* Ambient Color: 57688D
+		* Ambient Mode: Baked
+	Fog:
+		* Color: ECECEEFF
+		* Mode: Exponential squared
+		* Density: 0.03
 
 Project Settings > Quality:
-	* Shadow Resolution: Medium (saved me like 20 FPs)
+	* For every quality level below high, set LOD Bias to 2.
+		* For high and above, 3
+		* (At 2 trees appear just beyond your vision, but sometimes
+		   you can see them transitiong between different LOD stages.)
+	* On high setting:
+		* Turn shadow distance from 40 to 50, but turn shadow resolution
+		  down to medium.
 
 Post Processing Effects:
 (Import post-processing-2, put a "post processing layer" component
@@ -21,11 +30,8 @@ The standard asset in Unity store is not compatible with Unity 2017
 	* Weight: 1
 	* Profile (hit new)
 		* Grain:
-			* Colored: true
-			* Intensity: 0.578
-			* Size: 0.64
+			* Intensity: 0.439
+			* Size: 1.41
 		* Vignette:
-			* Mode: classic
-			* Color: Pure black
-			* Intensity: 0.388
+			* Intensity: 0.425
 
