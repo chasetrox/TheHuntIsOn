@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerCanvas : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerCanvas : MonoBehaviour
     [SerializeField] Image reticule;
     [SerializeField] Text gameStatusText;
     [SerializeField] Text healthValue;
-    //[SerializeField] Text logText;
+    [SerializeField] PlayAgainModal playAgainScreen;
 
     //Ensure there is only one PlayerCanvas
     void Awake()
@@ -50,5 +51,10 @@ public class PlayerCanvas : MonoBehaviour
     public void WriteGameStatusText(string text)
     {
         gameStatusText.text = text;
+    }
+
+    public void playAgainPrompt(UnityAction yesAction, UnityAction quitAction)
+    {
+    	playAgainScreen.Choice(yesAction, quitAction);
     }
 }

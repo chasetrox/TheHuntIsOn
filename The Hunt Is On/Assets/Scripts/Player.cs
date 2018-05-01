@@ -15,7 +15,6 @@ public class Player : NetworkBehaviour
 
     void Start()
     {
-        Debug.Log("Start for Player");
         mainCamera = Camera.main.gameObject;
 
         EnablePlayer();
@@ -38,10 +37,8 @@ public class Player : NetworkBehaviour
     void EnablePlayer()
     {
         if (isLocalPlayer) {
-            Debug.Log("Is local player");
             PlayerCanvas.canvas.Initialize();
             mainCamera.SetActive(false);
-            Debug.Log("main camera.set active false");
         }
 
         onToggleShared.Invoke(true);
@@ -54,15 +51,45 @@ public class Player : NetworkBehaviour
         }
     }
 
+    void Respawn()
+    {
+        if (isLocalPlayer) 
+        {
+            Transform spawn = NetworkManager.singleton.GetStartPosition ();
+            transform.position = spawn.position;
+            transform.rotation = spawn.rotation;
+        }
+
+        EnablePlayer ();
+    }
+
+
+    void DoNothing() { }
+
     public void Die()
     {
         if (isLocalPlayer) {
+        	UnityAction respawn = new UnityAction(Respawn);
+        	UnityAction doNothing = new UnityAction(DoNothing);
             PlayerCanvas.canvas.WriteGameStatusText("You Died!");
+            PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
         }
 
         DisablePlayer();
         Debug.Log("Player died!");
+    }
 
+    public void Won()
+    {
+        if (isLocalPlayer) {
+            UnityAction respawn = new UnityAction(Respawn);
+        	UnityAction doNothing = new UnityAction(DoNothing);
+            PlayerCanvas.canvas.WriteGameStatusText("You Won!");
+            PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
+        }
+
+        DisablePlayer();
+        Debug.Log("Player Won!");
     }
 
 

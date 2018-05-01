@@ -12,12 +12,15 @@ public class PlayerShooting : NetworkBehaviour {
     float elapsedTime;
     bool canShoot;
 
+    Player player;
+
 	// Use this for initialization
 	void Start () {
         // only allow local player to shoot
-        if (isLocalPlayer)
+        if (isLocalPlayer) {
             canShoot = true;
-
+            player = GetComponent<Player>();
+        }
 	}
 
 	// Update is called once per frame
@@ -33,7 +36,6 @@ public class PlayerShooting : NetworkBehaviour {
             elapsedTime = 0;
 	    	numBullets--;
             CmdFireShot(firePosition.position, firePosition.forward);
-            // SHOOT
         }
 	}
 
@@ -57,7 +59,10 @@ public class PlayerShooting : NetworkBehaviour {
             if (enemy != null)
             {
                 Debug.Log("Hit an enemy!");
-                enemy.TakeDamage(dmgPerShot);
+                bool died = enemy.TakeDamage(dmgPerShot);
+                if (died) {
+                    player.Won();
+                }
             }
         }
 

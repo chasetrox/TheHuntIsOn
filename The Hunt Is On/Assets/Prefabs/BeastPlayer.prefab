@@ -850,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1799781921997206
 GameObject:
   m_ObjectHideFlags: 1
@@ -910,10 +910,10 @@ GameObject:
   - component: {fileID: 114681024266735800}
   - component: {fileID: 136530011293140830}
   - component: {fileID: 114944677311205590}
-  - component: {fileID: 114722700079212506}
-  - component: {fileID: 114584526801156420}
-  - component: {fileID: 114227462567679776}
   - component: {fileID: 114770453340532572}
+  - component: {fileID: 114584526801156420}
+  - component: {fileID: 114722700079212506}
+  - component: {fileID: 114227462567679776}
   m_Layer: 0
   m_Name: BeastPlayer
   m_TagString: Untagged
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05493bc052b404b9a8beb21700b8a642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 10
 --- !u!114 &114681024266735800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2446,6 +2446,7 @@ MonoBehaviour:
   firePosition: {fileID: 4926874994733148}
   attackFX: {fileID: 0}
   numBullets: 100
+  dmgPerShot: 3
 --- !u!114 &114944677311205590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2473,6 +2474,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114584526801156420}
         m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1796822439223508}
+        m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

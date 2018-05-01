@@ -9,7 +9,6 @@ public class GunPivotSync : NetworkBehaviour
 	// Add RPC to move other players' guns
     void Start()
    {
-       Debug.Log("Script exists");
        if (isLocalPlayer) {
            gunPivot.parent = cameraTransform;
        }
