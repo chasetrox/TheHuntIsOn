@@ -11,6 +11,7 @@ public class PlayerCanvas : MonoBehaviour
     [SerializeField] Text gameStatusText;
     [SerializeField] Text healthValue;
     [SerializeField] PlayAgainModal playAgainScreen;
+    [SerializeField] UIFader damageImage;
 
     //Ensure there is only one PlayerCanvas
     void Awake()
@@ -40,6 +41,11 @@ public class PlayerCanvas : MonoBehaviour
     public void HideReticule()
     {
         reticule.enabled = false;
+    }
+
+    public void FlashDamageEffect()
+    {
+        damageImage.Flash ();
     }
 
 

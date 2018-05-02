@@ -42,7 +42,8 @@ public class PlayerHealth : NetworkBehaviour {
     [ClientRpc]
     void RpcTakeDamage(bool died)
     {
-        // Damage flash should go here
+        if (isLocalPlayer)
+            PlayerCanvas.canvas.FlashDamageEffect ();
         
         if (died)
         {
