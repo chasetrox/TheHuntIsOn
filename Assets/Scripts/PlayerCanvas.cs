@@ -10,6 +10,8 @@ public class PlayerCanvas : MonoBehaviour
     [SerializeField] Image reticule;
     [SerializeField] Text gameStatusText;
     [SerializeField] Text healthValue;
+    [SerializeField] Text ammoValue;
+    [SerializeField] GameObject ammoComponent;
     [SerializeField] PlayAgainModal playAgainScreen;
     [SerializeField] UIFader damageImage;
 
@@ -28,12 +30,15 @@ public class PlayerCanvas : MonoBehaviour
         reticule = GameObject.Find ("Reticle").GetComponent<Image> ();
         gameStatusText = GameObject.Find ("Player Info Text").GetComponent<Text> ();
         healthValue = GameObject.Find ("Health Text").GetComponent<Text> ();
+        ammoComponent = GameObject.Find ("Ammo Text");
+        healthValue = GameObject.Find ("AmmoNumText").GetComponent<Text> ();
 //        logText = GameObject.Find ("LogText").GetComponent<Text> ();
         //deathAudio = GameObject.Find ("DeathAudio").GetComponent<AudioSource> ();
     }
 
-    public void Initialize()
+    public void Initialize(bool isHunter)
     {
+        ammoComponent.SetActive(isHunter);
         reticule.enabled = true;
         gameStatusText.text = "";
     }
@@ -43,15 +48,24 @@ public class PlayerCanvas : MonoBehaviour
         reticule.enabled = false;
     }
 
+    public void HideAmmo()
+    {
+        ammoComponent.SetActive(false);
+    }
+
     public void FlashDamageEffect()
     {
         damageImage.Flash ();
     }
 
-
     public void SetHealth(int amount)
     {
         healthValue.text = "Health: "+amount.ToString ();
+    }
+
+    public void SetAmmo(int amount)
+    {
+        ammoValue.text = amount.ToString ();
     }
 
     public void WriteGameStatusText(string text)

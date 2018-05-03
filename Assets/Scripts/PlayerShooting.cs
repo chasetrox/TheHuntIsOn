@@ -21,6 +21,8 @@ public class PlayerShooting : NetworkBehaviour {
         if (isLocalPlayer) {
             canShoot = true;
             player = GetComponent<Player>();
+            if (player.isHunter)
+                PlayerCanvas.canvas.SetAmmo(numBullets);
         }
 	}
 
@@ -76,6 +78,8 @@ public class PlayerShooting : NetworkBehaviour {
     public void RpcProcessShotEffects(bool hitSomething, Vector3 point)
     {
         attackFX.PlayShotEffects ();
+        if (player.isHunter)
+                PlayerCanvas.canvas.SetAmmo(numBullets);
 
         if (hitSomething) {
             Debug.Log("Hit Something!");

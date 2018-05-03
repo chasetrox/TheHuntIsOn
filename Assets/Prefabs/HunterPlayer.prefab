@@ -1371,6 +1371,7 @@ GameObject:
   - component: {fileID: 114590533591110074}
   - component: {fileID: 114240820497899748}
   - component: {fileID: 114571889270767530}
+  - component: {fileID: 114188453362124646}
   m_Layer: 0
   m_Name: HunterPlayer
   m_TagString: Untagged
@@ -4266,7 +4267,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5429e90e84e594adc95e6d075d850035, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ad6e45f17f28b4a8da613864bf5f9127, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4414,6 +4415,19 @@ MonoBehaviour:
     i15: 227
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114188453362124646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702580013069850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae54fa4b67175f3488bbb983a9a98193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roarPrefab: {fileID: 1158571667855350, guid: ce5efc4e7db2a894b858099442fc4aec, type: 2}
+  timePerRoar: 2.5
 --- !u!114 &114240820497899748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4591,6 +4605,7 @@ MonoBehaviour:
   attackFX: {fileID: 114343731212259454}
   numBullets: 100
   dmgPerShot: 3
+  forcePerHit: 100
 --- !u!114 &114908826425978526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4793,6 +4808,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  isHunter: 1
 --- !u!124 &124229271007569444
 Behaviour:
   m_ObjectHideFlags: 1
@@ -5127,8 +5143,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.2
-      minScalar: 0.6
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8333,7 +8349,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1237550634
+  randomSeed: -37040373
   InitialModule:
     serializedVersion: 3
     enabled: 1

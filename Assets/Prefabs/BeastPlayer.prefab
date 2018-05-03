@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 95186448041478770}
   - component: {fileID: 114064761105417454}
   - component: {fileID: 114496564336228174}
+  - component: {fileID: 114497938988437536}
   m_Layer: 0
   m_Name: BeastPlayer
   m_TagString: Untagged
@@ -2484,6 +2485,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 6
+--- !u!114 &114497938988437536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883755467185854}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33a24d86d1418240a3ded702f50468b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodTrailPrefab: {fileID: 1259132740070424, guid: 755358340794a344cb6a1c37bab2f1bb,
+    type: 2}
+  spawnPosition: {fileID: 0}
+  thresholds:
+  - 6
+  - 10
+  baseSpawnRate: 2
 --- !u!114 &114584526801156420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2645,6 +2664,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  isHunter: 0
 --- !u!124 &124410013335865404
 Behaviour:
   m_ObjectHideFlags: 1

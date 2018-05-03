@@ -10,6 +10,7 @@ public class Player : NetworkBehaviour
     [SerializeField] ToggleEvent onToggleShared;
     [SerializeField] ToggleEvent onToggleLocal;
     [SerializeField] ToggleEvent onToggleRemote;
+    [SerializeField] public bool isHunter;
 
     GameObject mainCamera;
     NetworkAnimator anim;
@@ -49,7 +50,7 @@ public class Player : NetworkBehaviour
     void EnablePlayer()
     {
         if (isLocalPlayer) {
-            PlayerCanvas.canvas.Initialize();
+            PlayerCanvas.canvas.Initialize(isHunter);
             mainCamera.SetActive(false);
         }
 
