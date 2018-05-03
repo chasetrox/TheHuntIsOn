@@ -8,10 +8,12 @@ public class PlayerHealth : NetworkBehaviour {
 
 
     Player player;
+    ImpactReceiver playerImpact;
 
 	// Use this for initialization
 	void Awake () {
         player = GetComponent<Player>();
+        playerImpact = GetComponent<ImpactReceiver>();
 	}
 
     // When player is enabled, give max health (only run on server)
@@ -23,7 +25,7 @@ public class PlayerHealth : NetworkBehaviour {
 
     // Receive damage from other player
     [Server]
-    public bool TakeDamage(int dmg)
+    public bool TakeDamage(int dmg, Vector3 hitDirection)
     {
         bool died = false;
 

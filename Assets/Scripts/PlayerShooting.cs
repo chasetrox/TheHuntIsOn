@@ -8,6 +8,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] AttackEffectsManager attackFX;
     [SyncVar] public int numBullets = 3;
     public int dmgPerShot = 3;
+    public float forcePerHit = 100f;
 
     float elapsedTime;
     bool canShoot;
@@ -54,12 +55,14 @@ public class PlayerShooting : NetworkBehaviour {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 5.0f);
             // Check if the thing hit was a player
             PlayerHealth enemy = hit.transform.GetComponent<PlayerHealth>();
-                
+            
             // If so, player takes damage
             if (enemy != null)
             {
                 Debug.Log("Hit an enemy!");
-                bool died = enemy.TakeDamage(dmgPerShot);
+                ImpactReceiver enemyImpactRec = hit.transform.GetComponent<ImpactReceiver>();
+                enemyImpactRec.AddImpact(direction, forcePerHit);
+                bool died = enemy.TakeDamage(dmgPerShot, direction);
                 if (died) {
                     player.Won();
                 }

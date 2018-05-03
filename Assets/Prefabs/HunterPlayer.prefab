@@ -1370,6 +1370,7 @@ GameObject:
   - component: {fileID: 114607696891572128}
   - component: {fileID: 114590533591110074}
   - component: {fileID: 114240820497899748}
+  - component: {fileID: 114571889270767530}
   m_Layer: 0
   m_Name: HunterPlayer
   m_TagString: Untagged
@@ -3648,9 +3649,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702580013069850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -532.38367, y: 36.994446, z: -457.7688}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalRotation: {x: -0, y: -0.66746545, z: -0, w: 0.7446408}
+  m_LocalPosition: {x: 360.7, y: 2.71, z: -133.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4401913955707984}
   - {fileID: 4404422874102098}
@@ -3658,7 +3659,7 @@ Transform:
   - {fileID: 4178475799411448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -83.743004, z: 0}
 --- !u!4 &4891495674799266
 Transform:
   m_ObjectHideFlags: 1
@@ -4536,6 +4537,18 @@ MonoBehaviour:
   m_FootstepSounds: []
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
+--- !u!114 &114571889270767530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702580013069850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595ac2f44704a4a229e2c949c72ed140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 3
 --- !u!114 &114590533591110074
 MonoBehaviour:
   m_ObjectHideFlags: 1

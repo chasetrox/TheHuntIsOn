@@ -17,7 +17,7 @@ public class KILLZONE : MonoBehaviour {
     // Assuming the only thing that will entire this zone is a player
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<PlayerHealth>().TakeDamage(999);
+        other.GetComponent<PlayerHealth>().TakeDamage(999, Vector3.zero);
     }
 
 }

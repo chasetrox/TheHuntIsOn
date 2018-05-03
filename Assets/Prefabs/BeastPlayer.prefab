@@ -890,7 +890,6 @@ GameObject:
   - component: {fileID: 114489690093442274}
   - component: {fileID: 82240115742158684}
   - component: {fileID: 114681024266735800}
-  - component: {fileID: 136530011293140830}
   - component: {fileID: 114476387407840340}
   - component: {fileID: 114944677311205590}
   - component: {fileID: 114770453340532572}
@@ -899,7 +898,7 @@ GameObject:
   - component: {fileID: 114227462567679776}
   - component: {fileID: 95186448041478770}
   - component: {fileID: 114064761105417454}
-  - component: {fileID: 54729515527228100}
+  - component: {fileID: 114496564336228174}
   m_Layer: 0
   m_Name: BeastPlayer
   m_TagString: Untagged
@@ -1568,8 +1567,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1883755467185854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -484.45944, y: 40.55, z: -460.13}
+  m_LocalRotation: {x: -0, y: -0.66746545, z: -0, w: 0.7446408}
+  m_LocalPosition: {x: 360.7, y: 2.71, z: -133.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4926874994733148}
@@ -1578,7 +1577,7 @@ Transform:
   - {fileID: 4723933420118966}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -83.743004, z: 0}
 --- !u!4 &4630499399546956
 Transform:
   m_ObjectHideFlags: 1
@@ -2195,21 +2194,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042512449440754}
   m_Mesh: {fileID: 4300002, guid: 971d2217f59de49c99ebad43183436ce, type: 3}
---- !u!54 &54729515527228100
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1883755467185854}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!81 &81626525908112280
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2488,6 +2472,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &114496564336228174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883755467185854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595ac2f44704a4a229e2c949c72ed140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 6
 --- !u!114 &114584526801156420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2570,6 +2566,7 @@ MonoBehaviour:
   attackFX: {fileID: 0}
   numBullets: 100000
   dmgPerShot: 3
+  forcePerHit: 100
 --- !u!114 &114944677311205590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2655,19 +2652,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157248690899254}
   m_Enabled: 1
---- !u!136 &136530011293140830
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1883755467185854}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 1.1275883
-  m_Height: 8.117415
-  m_Direction: 1
-  m_Center: {x: -0.053739868, y: 6.695885, z: 0.3177185}
 --- !u!136 &136911295512413612
 CapsuleCollider:
   m_ObjectHideFlags: 1
