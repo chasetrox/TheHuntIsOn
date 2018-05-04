@@ -5,6 +5,8 @@ public class ShotEffectManager : AttackEffectsManager
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] AudioSource gunAudio;
     [SerializeField] GameObject impactPrefab;
+    [SerializeField] GameObject tracerPrefab;
+    [SerializeField] GameObject gunMuzzle;
 
     ParticleSystem impactEffect;
 
@@ -17,7 +19,6 @@ public class ShotEffectManager : AttackEffectsManager
     //Play muzzle flash and audio
     public override void PlayShotEffects()
     {
-        Debug.Log("Playing shot effects!");
         muzzleFlash.Stop(true);
         muzzleFlash.Play(true);
 
@@ -28,8 +29,7 @@ public class ShotEffectManager : AttackEffectsManager
     //Play impact effect and target position
     public override void PlayImpactEffect(Vector3 impactPosition)
     {
-        impactEffect.transform.position = impactPosition;
-        impactEffect.Stop();
-        impactEffect.Play();
+        BulletTracer bulletTracer = Instantiate(tracerPrefab, gunMuzzle.transform.position, Quaternion.identity).GetComponent<BulletTracer>();
+        bulletTracer.shoot(gunMuzzle.transform.position, impactPosition);
     }
 }

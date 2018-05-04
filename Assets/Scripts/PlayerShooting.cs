@@ -6,6 +6,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
+
     [SyncVar] public int numBullets = 3;
     public int dmgPerShot = 3;
     public float forcePerHit = 100f;
@@ -14,6 +15,7 @@ public class PlayerShooting : NetworkBehaviour {
     bool canShoot;
 
     Player player;
+
 
 	// Use this for initialization
 	void Start () {
@@ -62,8 +64,10 @@ public class PlayerShooting : NetworkBehaviour {
             if (enemy != null)
             {
                 Debug.Log("Hit an enemy!");
+                // Generates impact on enemy, kickback
                 ImpactReceiver enemyImpactRec = hit.transform.GetComponent<ImpactReceiver>();
                 enemyImpactRec.AddImpact(direction, forcePerHit);
+
                 bool died = enemy.TakeDamage(dmgPerShot, direction);
                 if (died) {
                     player.Won();
@@ -79,11 +83,11 @@ public class PlayerShooting : NetworkBehaviour {
     {
         attackFX.PlayShotEffects ();
         if (player.isHunter)
-                PlayerCanvas.canvas.SetAmmo(numBullets);
+            PlayerCanvas.canvas.SetAmmo(numBullets);
 
         if (hitSomething) {
             Debug.Log("Hit Something!");
-            //attackFX.PlayImpactEffect(point);
+            attackFX.PlayImpactEffect(point);
         }
     }
 	
@@ -91,5 +95,7 @@ public class PlayerShooting : NetworkBehaviour {
     public void addBullets(int num)
     {
 	    numBullets += num;
+        if (player.isHunter)
+            PlayerCanvas.canvas.SetAmmo(numBullets);
     }
 }

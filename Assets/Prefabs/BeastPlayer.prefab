@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 114497938988437536}
   m_Layer: 0
   m_Name: BeastPlayer
-  m_TagString: Untagged
+  m_TagString: Beast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2583,6 +2583,7 @@ MonoBehaviour:
   range: 6
   firePosition: {fileID: 4767179662787182}
   attackFX: {fileID: 0}
+  bulletTracerPrefab: {fileID: 0}
   numBullets: 100000
   dmgPerShot: 3
   forcePerHit: 100
