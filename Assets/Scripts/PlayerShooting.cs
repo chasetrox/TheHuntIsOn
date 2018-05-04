@@ -10,6 +10,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SyncVar] public int numBullets = 3;
     public int dmgPerShot = 3;
     public float forcePerHit = 100f;
+    public float hitRadius = 5f;
 
     float elapsedTime;
     bool canShoot;
@@ -53,7 +54,7 @@ public class PlayerShooting : NetworkBehaviour {
         Ray ray = new Ray (origin, direction);
         Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
-        bool result = Physics.Raycast(ray, out hit, range);
+        bool result = Physics.SphereCast(ray, hitRadius, out hit, range);
 
         if (result) {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 5.0f);

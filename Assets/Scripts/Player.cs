@@ -29,8 +29,9 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-        anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
-        anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
+        // TODO animator code
+        //anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
+        //anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
     }
 
     void DisablePlayer()

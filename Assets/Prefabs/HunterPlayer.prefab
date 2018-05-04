@@ -4606,11 +4606,10 @@ MonoBehaviour:
   range: 100
   firePosition: {fileID: 4590567062346770}
   attackFX: {fileID: 114343731212259454}
-  bulletTracerPrefab: {fileID: 1460337387525560, guid: 5825298e4f9b345498b68bf3604ad87a,
-    type: 2}
   numBullets: 100
   dmgPerShot: 3
   forcePerHit: 100
+  hitRadius: 1
 --- !u!114 &114908826425978526
 MonoBehaviour:
   m_ObjectHideFlags: 1
