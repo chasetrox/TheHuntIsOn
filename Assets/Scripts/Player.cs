@@ -30,14 +30,16 @@ public class Player : NetworkBehaviour
             return;
 
         // TODO animator code
-        //anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
-        //anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
+        anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
+        anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
     }
 
     void DisablePlayer()
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer) {
+            PlayerCanvas.canvas.HideGameUI();
             mainCamera.SetActive(true);
+        }
 
         onToggleShared.Invoke(false);
 
@@ -72,21 +74,21 @@ public class Player : NetworkBehaviour
             Transform spawn = NetworkManager.singleton.GetStartPosition ();
             transform.position = spawn.position;
             transform.rotation = spawn.rotation;
+
+            anim.SetTrigger ("Restart");
         }
 
         EnablePlayer ();
     }
 
 
-    void DoNothing() { }
-
     public void Die()
     {
         if (isLocalPlayer) {
-        	UnityAction respawn = new UnityAction(Respawn);
-        	UnityAction doNothing = new UnityAction(DoNothing);
             PlayerCanvas.canvas.WriteGameStatusText("You Died!");
-            PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
+            anim.SetTrigger ("Died");
+            // Prompt player after 3 seconds
+            Invoke("RenderPlayAgainPrompt", 3f);
         }
 
         DisablePlayer();
@@ -96,14 +98,23 @@ public class Player : NetworkBehaviour
     public void Won()
     {
         if (isLocalPlayer) {
-            UnityAction respawn = new UnityAction(Respawn);
-        	UnityAction doNothing = new UnityAction(DoNothing);
             PlayerCanvas.canvas.WriteGameStatusText("You Won!");
-            PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
+            // Prompt player after 3 seconds
+            Invoke("RenderPlayAgainPrompt", 3f);
         }
-
-        DisablePlayer();
+        // Winning player gets to continue playing for 3 seconds before reset
+        Invoke("DisablePlayer", 3f);
         Debug.Log("Player Won!");
+    }
+
+    void DoNothing() { }
+
+    // Render a prompt, pass actions that the quit/play again button should invoke
+    void RenderPlayAgainPrompt()
+    {
+        UnityAction respawn = new UnityAction(Respawn);
+        UnityAction doNothing = new UnityAction(DoNothing); 
+        PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
     }
 
 

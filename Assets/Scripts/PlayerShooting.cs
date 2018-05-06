@@ -6,6 +6,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
+    [SerializeField] GameObject tracerPrefab;
 
     [SyncVar] public int numBullets = 3;
     public int dmgPerShot = 3;
@@ -27,6 +28,8 @@ public class PlayerShooting : NetworkBehaviour {
             if (player.isHunter)
                 PlayerCanvas.canvas.SetAmmo(numBullets);
         }
+
+
 	}
 
 	// Update is called once per frame
@@ -52,9 +55,16 @@ public class PlayerShooting : NetworkBehaviour {
         RaycastHit hit;
 
         Ray ray = new Ray (origin, direction);
-        Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
+        //Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
         bool result = Physics.SphereCast(ray, hitRadius, out hit, range);
+
+        if (player.isHunter)
+        {
+            GameObject bulletTracer = Instantiate(tracerPrefab, firePosition.position, Quaternion.identity);
+            NetworkServer.Spawn(bulletTracer);  
+            bulletTracer.GetComponent<BulletTracer>().shoot(firePosition.position, hit.point);
+        }
 
         if (result) {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 5.0f);

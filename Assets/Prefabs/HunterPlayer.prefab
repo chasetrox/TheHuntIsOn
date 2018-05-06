@@ -4463,9 +4463,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 198169671913748922}
   gunAudio: {fileID: 82672335341846688}
   impactPrefab: {fileID: 0}
-  tracerPrefab: {fileID: 1460337387525560, guid: 5825298e4f9b345498b68bf3604ad87a,
-    type: 2}
-  gunMuzzle: {fileID: 1783235412825320}
 --- !u!114 &114563561208945934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4606,6 +4603,8 @@ MonoBehaviour:
   range: 100
   firePosition: {fileID: 4590567062346770}
   attackFX: {fileID: 114343731212259454}
+  tracerPrefab: {fileID: 1460337387525560, guid: 5825298e4f9b345498b68bf3604ad87a,
+    type: 2}
   numBullets: 100
   dmgPerShot: 3
   forcePerHit: 100

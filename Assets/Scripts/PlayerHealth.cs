@@ -8,12 +8,10 @@ public class PlayerHealth : NetworkBehaviour {
 
 
     Player player;
-    ImpactReceiver playerImpact;
 
 	// Use this for initialization
 	void Awake () {
         player = GetComponent<Player>();
-        playerImpact = GetComponent<ImpactReceiver>();
 	}
 
     // When player is enabled, give max health (only run on server)

@@ -31,21 +31,29 @@ public class PlayerCanvas : MonoBehaviour
         gameStatusText = GameObject.Find ("Player Info Text").GetComponent<Text> ();
         healthValue = GameObject.Find ("Health Text").GetComponent<Text> ();
         ammoComponent = GameObject.Find ("Ammo Text");
-        healthValue = GameObject.Find ("AmmoNumText").GetComponent<Text> ();
+        ammoValue = GameObject.Find ("AmmoNumText").GetComponent<Text> ();
 //        logText = GameObject.Find ("LogText").GetComponent<Text> ();
         //deathAudio = GameObject.Find ("DeathAudio").GetComponent<AudioSource> ();
     }
 
     public void Initialize(bool isHunter)
     {
-        ammoComponent.SetActive(isHunter);
         reticule.enabled = true;
+        ammoComponent.SetActive(isHunter);
+        healthValue.enabled = true;
         gameStatusText.text = "";
     }
 
     public void HideReticule()
     {
         reticule.enabled = false;
+    }
+
+    public void HideGameUI()
+    {
+        HideReticule();
+        HideAmmo();
+        healthValue.enabled = false;
     }
 
     public void HideAmmo()

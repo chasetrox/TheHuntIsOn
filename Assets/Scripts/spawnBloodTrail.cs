@@ -51,13 +51,13 @@ public class spawnBloodTrail : MonoBehaviour
         // Determine spawn rate:
 
         // 10 minutes have elapsed (4 blood trail spawns)
-        if (Time.time > thresholds[2])
+        if (Time.time > thresholds[1])
         {
             // Fastest spawn rate (spawn every 30s)
             spawnRate = baseSpawnRate * 4;
         }
         // 6 minutes have elapsed (3 blood trail spawns)
-        else if (Time.time > thresholds[1])
+        else if (Time.time > thresholds[0])
         {
             // Medium spawn rate (spawn every 1 min)
             spawnRate = baseSpawnRate * 2;
