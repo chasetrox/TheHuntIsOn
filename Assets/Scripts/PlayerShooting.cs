@@ -6,6 +6,7 @@ public class PlayerShooting : NetworkBehaviour {
     [SerializeField] float range = 35; // range of attack
     [SerializeField] Transform firePosition; // Position outside player
     [SerializeField] AttackEffectsManager attackFX;
+    [SerializeField] Transform gunShotPosition;
     [SerializeField] GameObject tracerPrefab;
 
     [SyncVar] public int numBullets = 3;
@@ -59,11 +60,12 @@ public class PlayerShooting : NetworkBehaviour {
 
         bool result = Physics.SphereCast(ray, hitRadius, out hit, range);
 
-        if (player.isHunter)
+        // Only show tracer when hunter hits something
+        if (player.isHunter && result)
         {
-            GameObject bulletTracer = Instantiate(tracerPrefab, firePosition.position, Quaternion.identity);
+            GameObject bulletTracer = Instantiate(tracerPrefab, gunShotPosition.position, Quaternion.identity);
             NetworkServer.Spawn(bulletTracer);  
-            bulletTracer.GetComponent<BulletTracer>().shoot(firePosition.position, hit.point);
+            bulletTracer.GetComponent<BulletTracer>().shoot(gunShotPosition.position, hit.point);
         }
 
         if (result) {

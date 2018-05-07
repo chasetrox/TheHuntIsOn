@@ -3,8 +3,8 @@ using System.Collections;
  
 public class LoadGame : MonoBehaviour 
 {	
-    public void NextLevelButton(string levelName)
+    public void NextLevelButton()
     {
-        Application.LoadLevel(levelName);
+        Application.LoadLevel("ForestLevel_B");
     }
 }
