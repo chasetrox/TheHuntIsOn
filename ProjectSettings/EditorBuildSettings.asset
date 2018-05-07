@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Pregame Scene.unity
+    guid: 74b826cdb6546472eac88805af1554f5
+  - enabled: 1
     path: Assets/ForestLevel_B.unity
     guid: 4dfe6a0775349654fa71645d7789552e
