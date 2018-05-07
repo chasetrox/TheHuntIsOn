@@ -29,7 +29,9 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-        // TODO animator code
+        if (Input.GetButtonUp("walk") || Input.GetButtonDown("walk"))
+            PlayerCanvas.canvas.ToggleFootsteps();
+
         anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
         anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
     }

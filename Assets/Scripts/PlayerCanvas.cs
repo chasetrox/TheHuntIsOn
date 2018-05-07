@@ -8,12 +8,15 @@ public class PlayerCanvas : MonoBehaviour
 
     [Header("Component References")]
     [SerializeField] Image reticule;
+    [SerializeField] GameObject footstepsOff;
     [SerializeField] Text gameStatusText;
     [SerializeField] Text healthValue;
     [SerializeField] Text ammoValue;
     [SerializeField] GameObject ammoComponent;
     [SerializeField] PlayAgainModal playAgainScreen;
     [SerializeField] UIFader damageImage;
+
+    private bool footstepsOn = true;
 
     //Ensure there is only one PlayerCanvas
     void Awake()
@@ -32,8 +35,7 @@ public class PlayerCanvas : MonoBehaviour
         healthValue = GameObject.Find ("Health Text").GetComponent<Text> ();
         ammoComponent = GameObject.Find ("Ammo Text");
         ammoValue = GameObject.Find ("AmmoNumText").GetComponent<Text> ();
-//        logText = GameObject.Find ("LogText").GetComponent<Text> ();
-        //deathAudio = GameObject.Find ("DeathAudio").GetComponent<AudioSource> ();
+        footstepsOff = GameObject.Find ("FootstepsOff");
     }
 
     public void Initialize(bool isHunter)
@@ -83,6 +85,16 @@ public class PlayerCanvas : MonoBehaviour
 
     public void playAgainPrompt(UnityAction yesAction, UnityAction quitAction)
     {
-    	playAgainScreen.Choice(yesAction, quitAction);
+        playAgainScreen.Choice(yesAction, quitAction);
+    }
+
+    public void ToggleFootsteps()
+    {
+    	if (footstepsOn) {
+            footstepsOff.SetActive(true);
+        } else {
+            footstepsOff.SetActive(false);
+        }
+        footstepsOn = !footstepsOn;
     }
 }
