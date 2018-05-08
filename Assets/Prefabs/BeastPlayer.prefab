@@ -1484,7 +1484,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364446680317690}
-  - component: {fileID: 114372607453203524}
+  - component: {fileID: 114782588203396566}
   m_Layer: 12
   m_Name: werewolf_new
   m_TagString: Untagged
@@ -1772,10 +1772,10 @@ GameObject:
   m_Layer: 12
   m_Name: Feet Pos
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1964895474692754
 GameObject:
   m_ObjectHideFlags: 1
@@ -2407,7 +2407,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822294417152830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 3.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4050418150867704}
@@ -2811,7 +2811,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1883755467185854}
   m_LocalRotation: {x: -0, y: -0.66746545, z: -0, w: 0.7446408}
-  m_LocalPosition: {x: 353.67883, y: 0.0073242188, z: -137.79065}
+  m_LocalPosition: {x: 353.53577, y: 0.0073242188, z: -143.98303}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4926874994733148}
@@ -3279,7 +3279,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963440944961110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05, z: -0.26}
+  m_LocalPosition: {x: 0, y: 2.3, z: -0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4624508766664132}
@@ -3687,20 +3687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armAnim: {fileID: 95696263615322906}
---- !u!114 &114372607453203524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1822294417152830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c0994998b494100ba2ea95f03024c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnOnDelay: 0.1
-  turnOffDelay: 3.5
-  enabledOnLoad: 0
 --- !u!114 &114476387407840340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3717,8 +3703,8 @@ MonoBehaviour:
   waterSplashPrefab: {fileID: 1220668668785800, guid: 1a5581b65527531488d481991be124a6,
     type: 2}
   footPos: {fileID: 4913579702555204}
-  footDistance: 10
-  groundCheckDist: 4
+  footDistance: 15
+  groundCheckDist: 8
   snowSFX:
   - {fileID: 8300000, guid: 749d0d9b4e98f9e47a186cbc61665696, type: 3}
   - {fileID: 8300000, guid: b0725645cdc22a547a85b875d1c24f03, type: 3}
@@ -3917,7 +3903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 4
-  m_SendInterval: 0.0625
+  m_SendInterval: 0.083333336
   m_SyncRotationAxis: 2
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -3925,7 +3911,7 @@ MonoBehaviour:
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
   m_InterpolateRotation: 30
-  m_InterpolateMovement: 3
+  m_InterpolateMovement: 1
 --- !u!114 &114770453340532572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3940,13 +3926,27 @@ MonoBehaviour:
   shotCooldown: 0.3
   range: 6
   firePosition: {fileID: 4767179662787182}
-  attackFX: {fileID: 0}
+  attackFX: {fileID: 114315558294601540}
   gunShotPosition: {fileID: 0}
   tracerPrefab: {fileID: 0}
   numBullets: 100000
   dmgPerShot: 4
   forcePerHit: 200
   hitRadius: 5
+--- !u!114 &114782588203396566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822294417152830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c0994998b494100ba2ea95f03024c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOnDelay: 0.1
+  turnOffDelay: 3.5
+  enabledOnLoad: 0
 --- !u!114 &114944677311205590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4013,7 +4013,7 @@ MonoBehaviour:
   onToggleRemote:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114372607453203524}
+      - m_Target: {fileID: 114782588203396566}
         m_MethodName: ToggleRenderersDelayed
         m_Mode: 0
         m_Arguments:

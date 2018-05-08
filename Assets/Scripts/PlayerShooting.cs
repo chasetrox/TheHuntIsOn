@@ -35,6 +35,7 @@ public class PlayerShooting : NetworkBehaviour {
     [ServerCallback]
     void OnEnable()
     {
+        player = GetComponent<Player>();
         if (isLocalPlayer && player.isHunter) {
             Debug.Log("in if on enable");
             numBullets = 20;
@@ -65,7 +66,7 @@ public class PlayerShooting : NetworkBehaviour {
         RaycastHit hit;
 
         Ray ray = new Ray (origin, direction);
-        //Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
+        Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
         // Only shoot at layers that the shooter isn't on
         int mask = 1 << layer;
@@ -108,8 +109,9 @@ public class PlayerShooting : NetworkBehaviour {
     public void RpcProcessShotEffects(bool hitSomething, Vector3 point)
     {
         attackFX.PlayShotEffects ();
-        if (player.isHunter)
+        if (player.isHunter) {
             PlayerCanvas.canvas.SetAmmo(numBullets);
+        }
 
         if (hitSomething) {
             Debug.Log("Hit Something!");

@@ -29,8 +29,10 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-        // if (Input.GetButtonUp("walk") || Input.GetButtonDown("walk"))
-        //     PlayerCanvas.canvas.ToggleFootsteps();
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
         anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
         anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
