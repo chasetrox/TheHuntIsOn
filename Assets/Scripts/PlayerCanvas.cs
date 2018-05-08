@@ -8,7 +8,7 @@ public class PlayerCanvas : MonoBehaviour
 
     [Header("Component References")]
     [SerializeField] Image reticule;
-    [SerializeField] GameObject footstepsOff;
+    [SerializeField] GameObject footstepsOnImage;
     [SerializeField] Text gameStatusText;
     [SerializeField] Text healthValue;
     [SerializeField] Text ammoValue;
@@ -35,11 +35,12 @@ public class PlayerCanvas : MonoBehaviour
         healthValue = GameObject.Find ("Health Text").GetComponent<Text> ();
         ammoComponent = GameObject.Find ("Ammo Text");
         ammoValue = GameObject.Find ("AmmoNumText").GetComponent<Text> ();
-        footstepsOff = GameObject.Find ("FootstepsOff");
+        footstepsOnImage = GameObject.Find ("FootstepsOn");
     }
 
     public void Initialize(bool isHunter)
     {
+        footstepsOnImage.SetActive(true);
         reticule.enabled = true;
         ammoComponent.SetActive(isHunter);
         healthValue.enabled = true;
@@ -56,6 +57,7 @@ public class PlayerCanvas : MonoBehaviour
         HideReticule();
         HideAmmo();
         healthValue.enabled = false;
+        footstepsOnImage.SetActive(false);
     }
 
     public void HideAmmo()
@@ -91,9 +93,9 @@ public class PlayerCanvas : MonoBehaviour
     public void ToggleFootsteps()
     {
     	if (footstepsOn) {
-            footstepsOff.SetActive(true);
+            footstepsOnImage.SetActive(true);
         } else {
-            footstepsOff.SetActive(false);
+            footstepsOnImage.SetActive(false);
         }
         footstepsOn = !footstepsOn;
     }

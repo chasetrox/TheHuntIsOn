@@ -19,19 +19,28 @@ public class PlayerShooting : NetworkBehaviour {
 
     Player player;
 
-
 	// Use this for initialization
 	void Start () {
         // only allow local player to shoot
         if (isLocalPlayer) {
             canShoot = true;
             player = GetComponent<Player>();
-            if (player.isHunter)
+            if (player.isHunter) {
                 PlayerCanvas.canvas.SetAmmo(numBullets);
+            }
         }
-
-
 	}
+
+    // When hunter is enabled, give max ammo (only run on server)
+    [ServerCallback]
+    void OnEnable()
+    {
+        if (isLocalPlayer && player.isHunter) {
+            Debug.Log("in if on enable");
+            numBullets = 20;
+            PlayerCanvas.canvas.SetAmmo(numBullets);
+        }
+    }
 
 	// Update is called once per frame
 	void Update () {

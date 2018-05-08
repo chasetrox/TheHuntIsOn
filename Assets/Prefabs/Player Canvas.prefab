@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reticule: {fileID: 114610660913215274}
-  footstepsOff: {fileID: 0}
+  footstepsOnImage: {fileID: 1022719402309818}
   gameStatusText: {fileID: 114707179251294558}
   healthValue: {fileID: 114419408474027102}
   ammoValue: {fileID: 114388028278724806}

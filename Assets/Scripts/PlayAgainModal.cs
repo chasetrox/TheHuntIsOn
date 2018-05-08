@@ -30,7 +30,5 @@ public class PlayAgainModal : MonoBehaviour {
 
     void ClosePanel () {
         modalPanelObject.SetActive (false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 }

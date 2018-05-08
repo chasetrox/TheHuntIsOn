@@ -29,8 +29,8 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-        if (Input.GetButtonUp("walk") || Input.GetButtonDown("walk"))
-            PlayerCanvas.canvas.ToggleFootsteps();
+        // if (Input.GetButtonUp("walk") || Input.GetButtonDown("walk"))
+        //     PlayerCanvas.canvas.ToggleFootsteps();
 
         anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
         anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
@@ -62,7 +62,6 @@ public class Player : NetworkBehaviour
         onToggleShared.Invoke(true);
 
         if(isLocalPlayer) {
-            Debug.Log("Invoking local");
             onToggleLocal.Invoke(true);
         } else {
             onToggleRemote.Invoke(true);
@@ -109,14 +108,24 @@ public class Player : NetworkBehaviour
         Debug.Log("Player Won!");
     }
 
-    void DoNothing() { }
+    void QuitGame() 
+    { 
+    	Application.LoadLevel("Pregame Scene");
+    }
+
+    void RespawnAction()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Respawn();
+    }
 
     // Render a prompt, pass actions that the quit/play again button should invoke
     void RenderPlayAgainPrompt()
     {
-        UnityAction respawn = new UnityAction(Respawn);
-        UnityAction doNothing = new UnityAction(DoNothing); 
-        PlayerCanvas.canvas.playAgainPrompt(respawn, doNothing);
+        UnityAction respawn = new UnityAction(RespawnAction);
+        UnityAction quitGame = new UnityAction(QuitGame); 
+        PlayerCanvas.canvas.playAgainPrompt(respawn, quitGame);
     }
 
 
