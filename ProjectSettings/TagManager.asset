@@ -7,6 +7,7 @@ TagManager:
   - water
   - Hunter
   - Beast
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Ground
   - Trees
   - Collectable
-  - 
-  - 
+  - Hunter
+  - Beast
   - 
   - 
   - 

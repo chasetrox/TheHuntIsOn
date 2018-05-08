@@ -45,20 +45,24 @@ public class PlayerShooting : NetworkBehaviour {
         if (Input.GetButtonDown("Fire1") && elapsedTime > shotCooldown && numBullets > 0) {
             elapsedTime = 0;
 	    	numBullets--;
-            CmdFireShot(firePosition.position, firePosition.forward);
+            CmdFireShot(firePosition.position, firePosition.forward, gameObject.layer);
         }
 	}
 
     // Client asks the server to fire a shot;
     [Command]
-    public virtual void CmdFireShot(Vector3 origin, Vector3 direction)
+    public virtual void CmdFireShot(Vector3 origin, Vector3 direction, int layer)
     {
         RaycastHit hit;
 
         Ray ray = new Ray (origin, direction);
         //Debug.DrawRay(ray.origin, ray.direction*3f, Color.red, 1f);
 
-        bool result = Physics.SphereCast(ray, hitRadius, out hit, range);
+        // Only shoot at layers that the shooter isn't on
+        int mask = 1 << layer;
+        mask = ~mask;
+
+        bool result = Physics.SphereCast(ray, hitRadius, out hit, range, mask, QueryTriggerInteraction.UseGlobal);
 
         // Only show tracer when hunter hits something
         if (player.isHunter && result)

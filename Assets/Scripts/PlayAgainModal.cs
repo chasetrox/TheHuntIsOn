@@ -13,7 +13,8 @@ public class PlayAgainModal : MonoBehaviour {
     // Yes/No/Cancel: A string, a Yes event, a No event and Cancel event
     public void Choice (UnityAction yesEvent, UnityAction noEvent) {
         modalPanelObject.SetActive (true);
-        // Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
         yesButton.onClick.RemoveAllListeners();
         yesButton.onClick.AddListener (yesEvent);
@@ -29,6 +30,7 @@ public class PlayAgainModal : MonoBehaviour {
 
     void ClosePanel () {
         modalPanelObject.SetActive (false);
-        // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
