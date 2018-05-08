@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: dd9a708511e8a4894b48ab1d99dccfeb
-timeCreated: 1525647692
+guid: fdaaf3b80e16e4631bfb437f9dfe97d5
+timeCreated: 1525742949
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: gun:gun:polySurface1
-    100002: Head
-    100004: Hips
-    100006: //RootNode
+    100000: //RootNode
+    100002: gun:gun:polySurface1
+    100004: Head
+    100006: Hips
     100008: imagePlane1
     100010: imagePlane2
     100012: LeftArm
@@ -98,10 +98,10 @@ ModelImporter:
     100180: Spine
     100182: Spine1
     100184: Spine2
-    400000: gun:gun:polySurface1
-    400002: Head
-    400004: Hips
-    400006: //RootNode
+    400000: //RootNode
+    400002: gun:gun:polySurface1
+    400004: Head
+    400006: Hips
     400008: imagePlane1
     400010: imagePlane2
     400012: LeftArm
@@ -200,10 +200,11 @@ ModelImporter:
     3300000: gun:gun:polySurface1
     4300000: pSphere2
     4300002: gun:gun:polySurface1
-    7400000: walking
-    7400002: Idle
-    7400004: left walk
-    7400006: right walk
+    7400000: Idle
+    7400002: Right Walk
+    7400004: Walk
+    7400006: Left Walk
+    7400008: Die
     9500000: //RootNode
     13700000: pSphere2
   externalObjects: {}
@@ -234,34 +235,6 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: walking
-      takeName: Take 001
-      firstFrame: 14
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Idle
       takeName: Take 001
       firstFrame: 1
@@ -290,7 +263,35 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: left walk
+      name: Walk
+      takeName: Take 001
+      firstFrame: 14
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Left Walk
       takeName: Take 001
       firstFrame: 55
       lastFrame: 76
@@ -318,10 +319,38 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: right walk
+      name: Right Walk
       takeName: Take 001
       firstFrame: 96
       lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 117
+      lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

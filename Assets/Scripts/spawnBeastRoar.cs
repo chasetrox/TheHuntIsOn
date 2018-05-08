@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 /* Alex Pantuck
  * Comp50
@@ -14,7 +15,7 @@
  * 
  */
 
-public class spawnBeastRoar : MonoBehaviour {
+public class spawnBeastRoar : NetworkBehaviour {
 
     public GameObject roarPrefab;
     // Every x minutes, spawn a roar
@@ -27,6 +28,10 @@ public class spawnBeastRoar : MonoBehaviour {
 	}
 	
 	void Update () {
+        // Dont spawn the roar and beast's client
+        if (!isLocalPlayer)
+            return;
+
         // If "timPerRoar" seconds have elapsed since the last beast roar placement
 		if ((Time.time - timeSince) > timePerRoar)
         {

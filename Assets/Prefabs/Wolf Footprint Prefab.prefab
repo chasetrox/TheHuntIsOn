@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4265480369535966}
   - component: {fileID: 114782772055296802}
+  - component: {fileID: 205002802246289224}
   m_Layer: 0
   m_Name: Wolf Footprint Prefab
   m_TagString: Untagged
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259509866330208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 355.15, y: 0.22, z: -137.84839}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 0.7, y: 1, z: 0.7}
   m_Children:
   - {fileID: 4386976328002302}
@@ -112,6 +113,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifespan: 30
+--- !u!205 &205002802246289224
+LODGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259509866330208}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.17556763, y: -0.09, z: 0.44151306}
+  m_Size: 9.015036
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LODs:
+  - screenRelativeHeight: 0.0460706
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 212859787863774882}
+    - renderer: {fileID: 212411969833023714}
+  m_Enabled: 1
 --- !u!212 &212411969833023714
 SpriteRenderer:
   m_ObjectHideFlags: 1

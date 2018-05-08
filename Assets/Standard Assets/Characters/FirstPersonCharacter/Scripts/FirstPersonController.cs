@@ -133,7 +133,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            // took this out because I wrote a script to handle this externally
+            //m_MouseLook.UpdateCursorLock();
         }
 
 

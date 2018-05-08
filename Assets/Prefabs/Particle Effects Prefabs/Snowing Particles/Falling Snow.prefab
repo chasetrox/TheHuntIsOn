@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4217424700557170}
   - component: {fileID: 198062129276453952}
   - component: {fileID: 199754370316432944}
+  - component: {fileID: 114036773498695636}
+  - component: {fileID: 114047475281943974}
   m_Layer: 0
   m_Name: Falling Snow
   m_TagString: Untagged
@@ -35,12 +37,55 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078808587470626}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 5}
+  m_LocalPosition: {x: 0, y: 22, z: 5}
   m_LocalScale: {x: 0.33333334, y: 0.3333335, z: 0.3333335}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &114036773498695636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078808587470626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 175
+    i1: 211
+    i2: 123
+    i3: 242
+    i4: 252
+    i5: 153
+    i6: 160
+    i7: 212
+    i8: 41
+    i9: 149
+    i10: 77
+    i11: 200
+    i12: 18
+    i13: 24
+    i14: 13
+    i15: 148
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114047475281943974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078808587470626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac6b494c66fe544f9cff87e55d5b48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198062129276453952
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +146,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1366540972
+  randomSeed: -815941642
   InitialModule:
     serializedVersion: 3
     enabled: 1

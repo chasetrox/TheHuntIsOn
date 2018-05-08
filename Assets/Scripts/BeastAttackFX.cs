@@ -11,7 +11,7 @@ public class BeastAttackFX : AttackEffectsManager {
 
     //Play muzzle flash and audio
     public override void PlayShotEffects() {
-    	armAnim.SetTrigger("Attack");
+    	//armAnim.SetTrigger("Attack");
     	// maybe audio for attack?
     }
 

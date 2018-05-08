@@ -78,6 +78,8 @@ public class Footsteps : NetworkBehaviour
                     Vector3 dir = Vector3.ProjectOnPlane(transform.forward, hit.normal);
                     Quaternion rot = Quaternion.LookRotation(dir, hit.normal);
                     GameObject step = Instantiate(footstepPrefab, pos, rot);
+                    // Nudge upwards a bit
+                    step.transform.position += (Vector3.up * 0.1f);
                     Debug.DrawRay(hit.point, Vector3.up, Color.red, 10);
                 }
             }

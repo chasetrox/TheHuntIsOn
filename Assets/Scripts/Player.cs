@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class ToggleEvent : UnityEvent<bool>{}
@@ -29,10 +30,12 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
+        /*
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        */
 
         anim.animator.SetFloat ("Speed", Input.GetAxis ("Vertical"));
         anim.animator.SetFloat ("Strafe", Input.GetAxis ("Horizontal"));
@@ -90,6 +93,7 @@ public class Player : NetworkBehaviour
         if (isLocalPlayer) {
             PlayerCanvas.canvas.WriteGameStatusText("You Died!");
             anim.SetTrigger ("Died");
+            Debug.Log("DIED");
             // Prompt player after 3 seconds
             Invoke("RenderPlayAgainPrompt", 3f);
         }
@@ -112,7 +116,7 @@ public class Player : NetworkBehaviour
 
     void QuitGame() 
     { 
-    	Application.LoadLevel("Pregame Scene");
+    	SceneManager.LoadScene("Pregame Scene");
     }
 
     void RespawnAction()

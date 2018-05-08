@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4808926336132520}
   - component: {fileID: 114225883752966290}
+  - component: {fileID: 205081623759232636}
   m_Layer: 0
   m_Name: Hunter Footsteps Prefab
   m_TagString: Untagged
@@ -79,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393942862720344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 357.06, y: 0.02280426, z: -132.8526}
+  m_LocalPosition: {x: 0, y: -0.055, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4132547915932944}
@@ -112,6 +113,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifespan: 30
+--- !u!205 &205081623759232636
+LODGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393942862720344}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.11999518, y: 0.0000000037252903, z: 0.125}
+  m_Size: 5.409999
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LODs:
+  - screenRelativeHeight: 0.05278698
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 212649251633923454}
+    - renderer: {fileID: 212014989778282684}
+  m_Enabled: 1
 --- !u!212 &212014989778282684
 SpriteRenderer:
   m_ObjectHideFlags: 1

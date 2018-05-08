@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.Networking;
 
 /* Alex Pantuck
  * spawnBloodTrail.cs
@@ -10,7 +10,7 @@
  * 
  */
 
-public class spawnBloodTrail : MonoBehaviour
+public class spawnBloodTrail : NetworkBehaviour
 {
     // The blood trail prefab
     public GameObject bloodTrailPrefab;
@@ -48,6 +48,10 @@ public class spawnBloodTrail : MonoBehaviour
 	
 	void Update ()
     {
+        // dont bother if not the local beast
+        if (!isLocalPlayer)
+            return;
+
         // Determine spawn rate:
 
         // 10 minutes have elapsed (4 blood trail spawns)

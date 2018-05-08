@@ -7,6 +7,14 @@ class OverrideNetworkManager : NetworkManager
 	[SerializeField] GameObject beastPrefab;
 	[SerializeField] GameObject hunterPrefab;
 
+    // This override lets people connect from different continents. By default, unity MM
+    // connects people to the nearest server, which means if youre in different continents
+    // you wont see the other persons server
+    private void Start()
+    {
+        NetworkManager networkManager = FindObjectOfType<NetworkManager>();
+        networkManager.SetMatchHost("us1-mm.unet.unity3d.com", networkManager.matchPort, true);
+    }
 
     public override void OnServerAddPlayer (NetworkConnection conn, short playerControllerId)
     {
